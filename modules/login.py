@@ -1,4 +1,4 @@
-def login_as():
+def login():
     print("==================================")
     print("    Employee Management System    ")
     print("==================================")

@@ -1,9 +1,9 @@
 import pymysql 
 
-import modules.login as login
+import modules.login as Login
 
-user_name = input(":: Enter user name >>> ")
-user_password = input(f":: Enter password for {user_name}>>> ")
+user_name = input(":: Username >>> ")
+user_password = input(f":: Password for {user_name} >>> ")
 
 try:
     connection_object = pymysql.Connection(
@@ -16,9 +16,14 @@ try:
     if connection_object.open():
         print("--- Successfully Connected to Database ---")
 
-except Exception as error:
-    print(f"Error :: {error}")
+except Exception as error0:
+    print(f"Error :: {error0}")
 
-while True:
+try:
+    while True:
+
+        Login.login()
+
+except KeyboardInterrupt as error1:
+    print(f"\nError :: {error1}\n")
     
-    login.login_as()
