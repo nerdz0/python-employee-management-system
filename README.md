@@ -1,4 +1,4 @@
-# python-employee-management-system
+# employee-management-system
 Employee-Management-System
 ---
 Author :: nerdz0
